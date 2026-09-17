@@ -87,6 +87,15 @@
         }
         .btn-discord:hover { background: #4752c4; }
 
+        .btn-instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; border: none;
+            padding: 10px 18px; border-radius: 4px; font-size: 11px; font-weight: 900;
+            text-transform: uppercase; letter-spacing: 1px; cursor: pointer;
+            display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; text-decoration: none;
+            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.3);
+        }
+        .btn-instagram:hover { opacity: 0.9; }
+
         /* HERO ESTILO BANNER OFICIAL */
         .hero {
             position: relative;
@@ -211,10 +220,8 @@
         }
         .btn-connect:hover { background: linear-gradient(135deg, var(--accent-blue), var(--accent-celeste)); }
 
-        /* TABLAS Y BUSCADORES (BANS / DEMOS / RANKING) */
-        .search-box {
-            display: flex; gap: 10px; margin-bottom: 20px;
-        }
+        /* TABLAS Y BUSCADORES */
+        .search-box { display: flex; gap: 10px; margin-bottom: 20px; }
         .search-input {
             flex: 1; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 4px;
             padding: 12px 18px; color: var(--text-main); font-size: 13px; outline: none;
@@ -271,7 +278,7 @@
             <button class="nav-link" onclick="switchTab('ranking')">Ranking</button>
             <button class="nav-link" onclick="switchTab('bans')">Bans & Apelaciones</button>
             <button class="nav-link" onclick="switchTab('demos')">Demos</button>
-            <button class="nav-link" onclick="switchTab('vip')">VIP</button>
+            <button class="nav-link" onclick="switchTab('vip')">VIP & Rangos</button>
             <button class="nav-link" onclick="switchTab('reglamento')">Reglamento</button>
         </div>
         <div class="nav-actions">
@@ -289,7 +296,7 @@
                 <p class="hero-desc">La comunidad oficial de Counter-Strike: Global Offensive y Counter-Strike 1.6. Servidores de alta gama, administración 24/7 y competencia pura.</p>
                 <div class="hero-actions">
                     <a href="#servidores" onclick="switchTab('inicio')" class="btn btn-primary">Ver Servidores IPs</a>
-                    <button onclick="switchTab('bans')" class="btn btn-danger">⚠️ Apelar un Ban</button>
+                    <a href="https://instagram.com/madeinargentinacs" target="_blank" class="btn btn-instagram">📸 Seguinos en Instagram</a>
                     <a href="https://discord.gg/bv8JJs8UaT" target="_blank" class="btn btn-discord">Unirme al Discord</a>
                 </div>
             </div>
@@ -443,7 +450,7 @@
                 <div class="search-box" style="flex: 1; min-width: 300px; margin-bottom: 0;">
                     <input type="text" class="search-input" placeholder="Buscar por Nombre, SteamID o IP...">
                 </div>
-                <a href="https://discord.gg/bv8JJs8UaT" target="_blank" class="btn btn-danger">📝 Abrir Ticket de Apelación en Discord</a>
+                <a href="https://discord.gg/bv8JJs8UaT" target="_blank" class="btn btn-danger">⚠️ Apelar un Ban (Discord)</a>
             </div>
 
             <div class="table-box">
@@ -547,40 +554,94 @@
         </div>
     </div>
 
-    <!-- VIP -->
+    <!-- VIP Y RANGOS (SEPARADOS) -->
     <div id="sec-vip" class="content-section">
         <div class="main-container">
             <div class="section-header">
                 <span class="section-subtitle">Beneficios Exclusivos</span>
-                <h2 class="section-title">Membresía VIP Made In Argentina</h2>
+                <h2 class="section-title">Tienda de Rangos y VIP</h2>
             </div>
-            <div class="servers-grid">
-                <div class="server-card">
-                    <span class="section-subtitle">Mensual</span>
-                    <h3 class="server-name" style="font-size: 24px; margin-top: 10px;">VIP 1 MES</h3>
-                    <h2 style="color: var(--accent-celeste); font-size: 32px; font-family: 'Anton', sans-serif; margin: 10px 0 20px;">$2.000 ARS</h2>
-                    <ul style="color: var(--text-muted); list-style: none; line-height: 2.2; margin-bottom: 25px; font-size: 13px;">
-                        <li>✓ Slot reservado en todos los servidores</li>
-                        <li>✓ Tag [VIP] en chat y scoreboard</li>
-                        <li>✓ Modelos y skins exclusivas</li>
-                        <li>✓ Prioridad en votación de mapas</li>
-                    </ul>
-                    <a href="https://instagram.com/madeinargentinacs" target="_blank" class="btn btn-outline" style="width: 100%; justify-content: center;">Adquirir vía Instagram</a>
-                </div>
-                
-                <div class="server-card" style="border-color: var(--border-card); background: linear-gradient(180deg, rgba(0, 119, 255, 0.08) 0%, var(--bg-card) 100%);">
-                    <span class="section-subtitle" style="color: var(--accent-celeste);">👑 Más Popular</span>
-                    <h3 class="server-name" style="font-size: 24px; margin-top: 10px;">VIP TRIMESTRAL</h3>
-                    <h2 style="color: var(--accent-celeste); font-size: 32px; font-family: 'Anton', sans-serif; margin: 10px 0 20px;">$5.000 ARS</h2>
-                    <ul style="color: var(--text-muted); list-style: none; line-height: 2.2; margin-bottom: 25px; font-size: 13px;">
-                        <li>✓ Todos los beneficios del VIP mensual</li>
-                        <li>✓ Descuento especial por 3 meses</li>
-                        <li>✓ Rol exclusivo en Discord y Staff support</li>
-                        <li>✓ Prioridad absoluta en soporte técnico</li>
-                    </ul>
-                    <a href="https://instagram.com/madeinargentinacs" target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center;">Adquirir Trimestral</a>
+            
+            <div class="tabs-row">
+                <button class="tab-btn active" onclick="switchVipTab('16')">Counter-Strike 1.6</button>
+                <button class="tab-btn" onclick="switchVipTab('csgo')">CS:GO</button>
+            </div>
+
+            <!-- PRECIOS CS 1.6 (SEPARADOS) -->
+            <div id="vip-16" class="vip-subcontainer">
+                <div class="servers-grid">
+                    <div class="server-card">
+                        <span class="section-subtitle">CS 1.6 • Mensual</span>
+                        <h3 class="server-name" style="font-size: 24px; margin-top: 10px;">VIP 1.6</h3>
+                        <h2 style="color: var(--accent-celeste); font-size: 32px; font-family: 'Anton', sans-serif; margin: 10px 0 20px;">$1.500 ARS</h2>
+                        <ul style="color: var(--text-muted); list-style: none; line-height: 2.2; margin-bottom: 25px; font-size: 13px;">
+                            <li>✓ Slot reservado en servidores 1.6</li>
+                            <li>✓ Tag [VIP] exclusivo en chat</li>
+                            <li>✓ Chaleco y balas extra en spawn</li>
+                            <li>✓ Modelos especiales</li>
+                        </ul>
+                        <a href="https://instagram.com/madeinargentinacs" target="_blank" class="btn btn-outline" style="width: 100%; justify-content: center;">Adquirir VIP 1.6</a>
+                    </div>
+
+                    <div class="server-card">
+                        <span class="section-subtitle" style="color: #f59e0b;">CS 1.6 • Moderación</span>
+                        <h3 class="server-name" style="font-size: 24px; margin-top: 10px;">MOD 1.6</h3>
+                        <h2 style="color: #f59e0b; font-size: 32px; font-family: 'Anton', sans-serif; margin: 10px 0 20px;">$3.000 ARS</h2>
+                        <ul style="color: var(--text-muted); list-style: none; line-height: 2.2; margin-bottom: 25px; font-size: 13px;">
+                            <li>✓ Permisos de AMX Mod X básicos</li>
+                            <li>✓ Kick, Slap y Slag a jugadores tóxicos</li>
+                            <li>✓ Cambio de mapa por votación</li>
+                            <li>✓ Acceso a comandos de moderación</li>
+                        </ul>
+                        <a href="https://instagram.com/madeinargentinacs" target="_blank" class="btn btn-outline" style="width: 100%; justify-content: center; border-color: rgba(245, 158, 11, 0.4); color: #f59e0b;">Adquirir Mod 1.6</a>
+                    </div>
+                    
+                    <div class="server-card" style="border-color: var(--border-card); background: linear-gradient(180deg, rgba(0, 119, 255, 0.08) 0%, var(--bg-card) 100%);">
+                        <span class="section-subtitle" style="color: var(--accent-celeste);">👑 CS 1.6 • Control Total</span>
+                        <h3 class="server-name" style="font-size: 24px; margin-top: 10px;">ADMIN 1.6</h3>
+                        <h2 style="color: var(--accent-celeste); font-size: 32px; font-family: 'Anton', sans-serif; margin: 10px 0 20px;">$5.000 ARS</h2>
+                        <ul style="color: var(--text-muted); list-style: none; line-height: 2.2; margin-bottom: 25px; font-size: 13px;">
+                            <li>✓ Rango Administrador completo</li>
+                            <li>✓ Banlist y Amxban total</li>
+                            <li>✓ Inmunidad ante sanciones</li>
+                            <li>✓ Acceso prioritario al staff</li>
+                        </ul>
+                        <a href="https://instagram.com/madeinargentinacs" target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center;">Adquirir Admin 1.6</a>
+                    </div>
                 </div>
             </div>
+
+            <!-- PRECIOS CS:GO -->
+            <div id="vip-csgo" class="vip-subcontainer" style="display: none;">
+                <div class="servers-grid">
+                    <div class="server-card">
+                        <span class="section-subtitle">CS:GO • Mensual</span>
+                        <h3 class="server-name" style="font-size: 24px; margin-top: 10px;">VIP CS:GO</h3>
+                        <h2 style="color: var(--accent-celeste); font-size: 32px; font-family: 'Anton', sans-serif; margin: 10px 0 20px;">$2.000 ARS</h2>
+                        <ul style="color: var(--text-muted); list-style: none; line-height: 2.2; margin-bottom: 25px; font-size: 13px;">
+                            <li>✓ Slot reservado en servidores CS:GO</li>
+                            <li>✓ Tag [VIP] en scoreboard y chat</li>
+                            <li>✓ Skins y agentes exclusivos</li>
+                            <li>✓ Prioridad en votación de mapas</li>
+                        </ul>
+                        <a href="https://instagram.com/madeinargentinacs" target="_blank" class="btn btn-outline" style="width: 100%; justify-content: center;">Adquirir VIP CS:GO</a>
+                    </div>
+                    
+                    <div class="server-card" style="border-color: var(--border-card); background: linear-gradient(180deg, rgba(0, 119, 255, 0.08) 0%, var(--bg-card) 100%);">
+                        <span class="section-subtitle" style="color: var(--accent-celeste);">👑 CS:GO • Trimestral</span>
+                        <h3 class="server-name" style="font-size: 24px; margin-top: 10px;">VIP TRIMESTRAL CS:GO</h3>
+                        <h2 style="color: var(--accent-celeste); font-size: 32px; font-family: 'Anton', sans-serif; margin: 10px 0 20px;">$5.000 ARS</h2>
+                        <ul style="color: var(--text-muted); list-style: none; line-height: 2.2; margin-bottom: 25px; font-size: 13px;">
+                            <li>✓ Todos los beneficios del VIP CS:GO</li>
+                            <li>✓ Descuento especial por 3 meses</li>
+                            <li>✓ Rol exclusivo en Discord y soporte</li>
+                            <li>✓ Prioridad absoluta</li>
+                        </ul>
+                        <a href="https://instagram.com/madeinargentinacs" target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center;">Adquirir Trimestral CS:GO</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -611,13 +672,21 @@
             
             document.getElementById('sec-' + tabId).classList.add('active');
             
-            // Buscar el botón correspondiente en la barra de navegación
             document.querySelectorAll('.nav-link').forEach(btn => {
                 if(btn.getAttribute('onclick').includes(tabId)) {
                     btn.classList.add('active');
                 }
             });
             window.scrollTo({ top: 300, behavior: 'smooth' });
+        }
+
+        function switchVipTab(game) {
+            document.querySelectorAll('.vip-subcontainer').forEach(sub => sub.style.display = 'none');
+            document.getElementById('vip-' + game).style.display = 'block';
+            
+            // Cambiar estados activos de los botones internos
+            event.target.parentElement.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
         }
     </script>
 </body>
